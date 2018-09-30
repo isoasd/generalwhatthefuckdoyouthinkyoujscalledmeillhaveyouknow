@@ -83,7 +83,7 @@ bot.on("message", async message => {
 		}
 	}
 	// solo //
-	if(message.channel.id === "486681400133681153" && message.member.roles.find(r => r.name === "Scrim Staff")){
+	if(message.channel.id === "490054558232477716" && message.member.roles.find(r => r.name === "Scrim Staff")){
 		if(message.content.includes("solo")){
 		message.delete();
 		message.channel.send("------------------------------------------");
@@ -106,7 +106,7 @@ bot.on("message", async message => {
 	}
 
 	// duo //
-	if(message.channel.id === "486681400133681153" && message.member.roles.find(r => r.name === "Scrim Staff")){
+	if(message.channel.id === "490054558232477716" && message.member.roles.find(r => r.name === "Scrim Staff")){
 		if(message.content.includes("duo")){
 		message.delete();
 		message.channel.send("------------------------------------------");
@@ -129,7 +129,7 @@ bot.on("message", async message => {
 	}
 	
 	// squad //
-	if(message.channel.id === "486681400133681153" && message.member.roles.find(r => r.name === "Scrim Staff")){
+	if(message.channel.id === "490054558232477716" && message.member.roles.find(r => r.name === "Scrim Staff")){
 		if(message.content.includes("squad")){
 		message.delete();
 		message.channel.send("------------------------------------------");
