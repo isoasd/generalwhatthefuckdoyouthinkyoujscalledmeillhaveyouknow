@@ -28,7 +28,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
   bot.user.setStatus('available');
-  bot.user.setActivity("to your commands!", {type: "LISTENING"});
+  bot.user.setActivity("!help para ayudarte", {type: "LISTENING"});
 });
 
 
@@ -82,18 +82,19 @@ bot.on("message", async message => {
 			message.delete();
 		}
 	}
+	// solo //
 	if(message.channel.id === "486681400133681153" && message.member.roles.find(r => r.name === "Scrim Staff")){
-		if(message.content.includes("-")){
+		if(message.content.includes("solo")){
 		message.delete();
 		message.channel.send("------------------------------------------");
 		let servericon = bot.user.displayAvatarURL;
 		let hosticon = message.author.displayAvatarURL;
 		let announcement = new Discord.RichEmbed()
-		.setTitle("Announcement!")
+		.setTitle("Anuncio!")
 		.setThumbnail(servericon)
-		.setDescription("**Join Snipe Countdown in 10 Minutes!**")
-		.addField("Snipes are starting soon!", "*Be sure to join the talk channel!*", true)
-		.setFooter("Please be ready", hosticon)
+		.setDescription("**Unete a la cuenta atras para el proximo scrim SOLO en 5 minutos**")
+		.addField("El Scrim SOLO estan por comenzar", "*Asegurate de unirte al canal de conversacion!*", true)
+		.setFooter("Por favor este listo", hosticon)
 		.setTimestamp()
 		.setColor(16760937);
 			
@@ -102,7 +103,55 @@ bot.on("message", async message => {
 		message.channel.send("------------------------------------------");
 		}
 	   
-	   }
+	}
+
+	// duo //
+	if(message.channel.id === "486681400133681153" && message.member.roles.find(r => r.name === "Scrim Staff")){
+		if(message.content.includes("duo")){
+		message.delete();
+		message.channel.send("------------------------------------------");
+		let servericon = bot.user.displayAvatarURL;
+		let hosticon = message.author.displayAvatarURL;
+		let announcement = new Discord.RichEmbed()
+		.setTitle("Anuncio!")
+		.setThumbnail(servericon)
+		.setDescription("**Unete a la cuenta atras para el proximo scrim DUO en 5 minutos**")
+		.addField("El Scrim DUO estan por comenzar", "*Asegurate de unirte al canal de conversacion!*", true)
+		.setFooter("Por favor este listo", hosticon)
+		.setTimestamp()
+		.setColor(16760937);
+			
+		await message.channel.send(announcement);
+			
+		message.channel.send("------------------------------------------");
+		}
+	   
+	}
+	
+	// squad //
+	if(message.channel.id === "486681400133681153" && message.member.roles.find(r => r.name === "Scrim Staff")){
+		if(message.content.includes("squad")){
+		message.delete();
+		message.channel.send("------------------------------------------");
+		let servericon = bot.user.displayAvatarURL;
+		let hosticon = message.author.displayAvatarURL;
+		let announcement = new Discord.RichEmbed()
+		.setTitle("Anuncio!")
+		.setThumbnail(servericon)
+		.setDescription("**Unete a la cuenta atras para el proximo scrim SQUAD en 5 minutos**")
+		.addField("El Scrim SQUAD estan por comenzar", "*Asegurate de unirte al canal de conversacion!*", true)
+		.setFooter("Por favor este listo", hosticon)
+		.setTimestamp()
+		.setColor(16760937);
+			
+		await message.channel.send(announcement);
+			
+		message.channel.send("------------------------------------------");
+		}
+	   
+	}
+	
+	
 	if(message.channel.id === "486681158348701697"){
 		if(message.content || banMSG.includes(`!`)){
 			message.delete();
