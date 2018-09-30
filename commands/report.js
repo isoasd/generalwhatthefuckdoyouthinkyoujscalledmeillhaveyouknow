@@ -5,25 +5,25 @@ module.exports.run = async (bot, message, args) => {
 	if(message.channel.id === "486681158348701697") return;
 
 	let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-	if(!rUser) return message.channel.send("Couldn't find the specified user.");
+	if(!rUser) return message.channel.send("No se pudo encontrar el usuario especificado.");
 	
 	let reason = args.join(" ").slice(22);
 
 	let reportEmbed = new Discord.RichEmbed()
-	.setDescription("Reports")
+	.setDescription("Reportes")
 	.setColor(6812512)
-	.addField("Reported User", `${rUser} with ID: ${rUser.id}`)
-	.addField("Reported By", `${message.author} with ID: ${message.author.id}`)
-	.addField("Channel", message.channel)
-	.addField("Time", message.createdAt)
-	.addField("Reason", reason);
+	.addField("Usuario informado", `${rUser} con ID: ${rUser.id}`)
+	.addField("Reportado por", `${message.author} con ID: ${message.author.id}`)
+	.addField("Canal", message.channel)
+	.addField("Tiempo", message.createdAt)
+	.addField("Razon", reason);
 
 
 	let reportschannel = message.guild.channels.find(`name`, "reports");
-	if(!reportschannel) return message.channel.send("Couldn't find reports channel");
+	if(!reportschannel) return message.channel.send("	No se pudo encontrar el canal de reportes");
 	
 	message.delete().catch(O_o=>{});
-	message.reply("Your report has been sent!");
+	message.reply("¡Tu reporte ha sido enviado!");
 	reportschannel.send(reportEmbed);
   
   

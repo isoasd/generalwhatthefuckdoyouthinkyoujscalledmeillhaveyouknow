@@ -8,12 +8,12 @@ if(message.channel.id === "486026246007029781") return;
 	let helpEmbed = new Discord.RichEmbed()
 	.addField("Commands", "User Commands", true)
 	.addField("Other", "Commands", true)
-    	.addField("!help", "Help Command", true)
-   	.addField("!invite", "Makes Invite", true)
-    	.addField("!report", "Report player", true)
-    	.addField("!info", "Show Info", true)
-    	.addField("!fn", "Tracks a user")
-	.setFooter("You executed the !help command with ScrimBot!")
+    	.addField("!help", "Comando de ayuda", true)
+   	.addField("!invite", "Obtener un link de invitacion", true)
+    	.addField("!report", "Reportar jugador", true)
+    	.addField("!info", "Mostrar informacion", true)
+    	.addField("!fn", "Estadisticas de Fortnite")
+	.setFooter("Estos son todos los comandos por ahora!")
    	.setColor(6812512);
 
 	message.channel.sendEmbed(helpEmbed);

@@ -17,10 +17,10 @@ if(args[0]) return;
 	let lvlEmbed = new Discord.RichEmbed()
 	.setColor(7239035)
 	.setTitle(`**Hey ${message.author.username}!**`)
-	.setDescription("This is a level system based on chatter.")
-	.addField("Your level is currently", `${curlvl} 👈`, true)
-	.addField("Your XP is currently", `${curxp} 👈`, true)
-	.setFooter(`You only need ${difference} XP to level up!`, message.author.displayAvatarURL);
+	.setDescription("Este es un sistema de niveles basado en la charla.")
+	.addField("Tu nivel actualmente es", `${curlvl} 👈`, true)
+	.addField("Tu XP actualmente es", `${curxp} 👈`, true)
+	.setFooter(`Solo necesitas ${difference} XP para subir de nivel!`, message.author.displayAvatarURL);
 		
 	message.reply(lvlEmbed);
 
