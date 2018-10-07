@@ -1,6 +1,12 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args, config) => {
+
+    if(message.channel.id === "486026246007029781") return;
+    if(message.channel.id === "496203607419387904") return;
+    if(message.channel.id === "486681158348701697") return;  
+    if(message.channel.id === "486681135619899412") return;
+
     const landings = [
         "Alameda Aullante", "Tuneles Tortuosos",
         "Templo Tomate", "Caserio Colesterol",
