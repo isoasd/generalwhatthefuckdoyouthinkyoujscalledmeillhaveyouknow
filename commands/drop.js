@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args, config) => {
         .setTimestamp()
         .setColor(0x62c1f0)
     message.channel.send(embed);
-    // message.channel.send(attachment);
+    message.channel.send(attachment);
 }
 
 module.exports.help = {
