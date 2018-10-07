@@ -6,13 +6,12 @@ if(message.channel.id === "486026246007029781") return;
 		if(message.channel.id === "486681158348701697") return;
 
 	let helpEmbed = new Discord.RichEmbed()
-	.addField("Commands", "User Commands", true)
-	.addField("Other", "Commands", true)
-    	.addField("!help", "Comando de ayuda", true)
+	.addField("!help", "Comando de ayuda", true)
    	.addField("!invite", "Obtener un link de invitacion", true)
-    	.addField("!report", "Reportar jugador", true)
-    	.addField("!info", "Mostrar informacion", true)
-    	.addField("!fn", "Estadisticas de Fortnite")
+    .addField("!report", "Reportar jugador", true)
+    .addField("!info", "Mostrar informacion", true)
+	.addField("!fn", "Estadisticas de Fortnite")
+	.addField("!drop", "Te dira una ubicacion en donde caer")
 	.setFooter("Estos son todos los comandos por ahora!")
    	.setColor(6812512);
 
